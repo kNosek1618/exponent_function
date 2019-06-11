@@ -1,13 +1,10 @@
 
 
-def speed_of_time(acceleration, run_speed, time_sec=1):
+def speed_of_time(acceleration, run_speed):
     while (acceleration + run_speed) < 340:
-        result = 1
-        for sec in range(340 // (acceleration + run_speed)):
-            result = result * acceleration
-            time_sec += 1
-        return time_sec
-
-
+       for sec in range(340 // (acceleration + run_speed)):
+            acceleration = acceleration * 2
+    else:
+        return print(sec)
 
 print(speed_of_time(2, 4))
